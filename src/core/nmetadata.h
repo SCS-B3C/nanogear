@@ -24,6 +24,8 @@
 #ifndef NMETADATA_H
 #define	NMETADATA_H
 
+#include "nanogear_global.h"
+
 /*!
  * \class NMetadata
  * \brief Description of data contained in a resource representation
@@ -37,7 +39,7 @@
  * metadata and resource metadata: information about the resource that is not specific to the
  * supplied representation." Roy T. Fielding
  */
-class NMetadata {
+class NANOGEARSHARED_EXPORT NMetadata {
 public:
     /*!
      * Default constructor

@@ -27,6 +27,7 @@
 #include <QDir>
 #include <QString>
 
+#include "nanogear_global.h"
 #include "nresource.h"
 #include "nrepresentation.h"
 
@@ -38,7 +39,7 @@ class NResponse;
  * \class NDirectoryResource
  * \brief A resource mapping files under a directory to URI paths
  *
- * NDirectoryResource can be used to provide filesystem access to the clients.
+ * NDirectoryResource can be used to provide file system access to the clients.
  *
  * A typical use-case of this class is to send images, scripts and other data
  * along with an HTML page to the client or just let clients (typically
@@ -47,14 +48,14 @@ class NResponse;
  * NDirectoryResource accepts a directory as the 'root' directory and every file
  * contained will be mapped to an URI path.
  */
-class NDirectoryResource : public NResource
+class NANOGEARSHARED_EXPORT NDirectoryResource : public NResource
 {
 public:
     NDirectoryResource(const QString& root);
 
     /*!
-     * Set the root directory on the filesystem
-     * \param root An absolute or relative path to a directory on the filesystem
+     * Set the root directory on the file system
+     * \param root An absolute or relative path to a directory on the file system
      */
     void setRoot(const QString& root)
     { m_root = QDir(root); }
@@ -100,8 +101,8 @@ public:
 
 protected:
     /*!
-     * Handle GET request. If a file is requested do a MIME type lookup using
-     * libmagic. If a directory is requested first look for an index file and
+     * Handle GET request. 
+     * If a directory is requested first look for an index file and
      * show it (if available) otherwise show a directory listing if allowed
      * or send a 403 when this resource is not allowed to send directory
      * listings.

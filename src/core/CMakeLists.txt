@@ -7,6 +7,28 @@ set(nanogear_SRCS
     nrouter.cpp
     nstatus.cpp
     nmimetype.cpp
+	nserver.cpp
+	nanogear_global.h
+	napplication.h
+	napplication.cpp
+	nclientinfo.h
+	ncomponent.h
+	nconnector.h
+	ndirectoryresource.h
+	nmetadata.h
+	nmethod.h
+	nmimetype.h
+	npreference.h
+	npreferencelist.h
+	nprotocol.h
+	nrepresentation.h
+	nrequest.h
+	nresource.h
+	nresponse.h
+	nrouter.h
+	nserver.h
+	nstatus.h
+	nuniform.h
 )
 
 add_library(Nanogear SHARED ${nanogear_SRCS})
@@ -16,12 +38,7 @@ set_target_properties(Nanogear PROPERTIES
     SOVERSION ${NANOGEAR_MAJOR}
 )
 
-target_link_libraries(Nanogear ${Libmagic_LIBRARY} ${QT_LIBRARIES})
-
-# Install the library
-install(TARGETS Nanogear
-    LIBRARY DESTINATION lib
-)
+target_link_libraries(Nanogear ${QT_LIBRARIES})
 
 # Install header files
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/

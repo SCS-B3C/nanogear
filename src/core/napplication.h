@@ -27,6 +27,7 @@
 
 #include <QCoreApplication>
 
+#include "nanogear_global.h"
 #include "nserver.h"
 #include "nresponse.h"
 #include "nresource.h"
@@ -40,7 +41,7 @@
  * of dependant resources.
  * It is responsible for starting the event loop and the attached connector.
  */
-class NApplication : public QCoreApplication, public NResource
+class NANOGEARSHARED_EXPORT NApplication : public QCoreApplication, public NResource
 {
 public:
     /*!

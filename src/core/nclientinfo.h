@@ -26,6 +26,7 @@
 
 #include <QLocale>
 
+#include "nanogear_global.h"
 #include "nmimetype.h"
 #include "npreferencelist.h"
 
@@ -47,7 +48,7 @@ class QTextCodec;
  * This class is meant to be 'friend' of server-side components only.
  */
 
-class NClientInfo
+class NANOGEARSHARED_EXPORT NClientInfo
 {
 public:
     /*!

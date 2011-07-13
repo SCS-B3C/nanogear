@@ -26,6 +26,7 @@
 
 #include <QString>
 
+#include "nanogear_global.h"
 #include "nmetadata.h"
 
 /*!
@@ -35,7 +36,7 @@
  * This class is used to send response status codes to the clients.
  * Status codes conform to HTTP 1.1 status codes.
  */
-class NStatus : public NMetadata
+class NANOGEARSHARED_EXPORT NStatus : public NMetadata
 {
 public:
     /*!

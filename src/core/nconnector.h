@@ -26,10 +26,11 @@
 
 #include <QList>
 
+#include "nanogear_global.h"
 #include "nprotocol.h"
 #include "nresource.h"
 
-class NConnector : public NResource {
+class NANOGEARSHARED_EXPORT NConnector : public NResource {
 public:
     void setProtocols(const QList<NProtocol>& protocols)
     { m_protocols = protocols; }

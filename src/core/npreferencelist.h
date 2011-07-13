@@ -27,6 +27,7 @@
 #include <QMap>
 #include <QList>
 
+#include "nanogear_global.h"
 #include "npreference.h"
 
 /*!

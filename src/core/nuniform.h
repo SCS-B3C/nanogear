@@ -27,17 +27,17 @@
 #include <QObject>
 #include <QString>
 
+#include "nanogear_global.h"
 #include "nstatus.h"
 #include "nresponse.h"
-
-class NRequest;
+#include "nrequest.h"
 
 /*!
  * \class NUniform
  * \brief Uniform interface common to all resource types
  */
 
-class NUniform : public QObject {
+class NANOGEARSHARED_EXPORT NUniform : public QObject {
 protected:
     /*!
      * Override this method in a derived class to handle a GET request.

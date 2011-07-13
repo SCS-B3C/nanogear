@@ -29,6 +29,7 @@
 #include <QString>
 #include <QByteArray>
 
+#include "nanogear_global.h"
 #include "nmethod.h"
 #include "nclientinfo.h"
 
@@ -40,10 +41,10 @@ class NRepresentation;
  *
  * A Request object represents a client request. That is, every client, either
  * a web browser or another program, will usually include supported media types,
- * supported charset, the resource context, request method and request
+ * supported char set, the resource context, request method and request
  * parameters.
  *
- * It is connector's (or, in general, a Server implementation) responsiblity
+ * It is connector's (or, in general, a Server implementation) responsibility
  * to fill this object and pass a const reference to resources methods handlers.
  *
  * Informations sent by the client (such as supported media types, character
@@ -54,7 +55,7 @@ class NRepresentation;
  * The request body is represented by a read-only QByteArray
  */
 
-class NRequest : public QObject
+class NANOGEARSHARED_EXPORT NRequest : public QObject
 {
 public:
     /*!

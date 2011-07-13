@@ -1,4 +1,9 @@
-set(internalhttp_SRCS nhttpserver.cpp)
+set(internalhttp_SRCS 
+	nhttpserver.cpp
+	nutility.h
+	nhttpserver.h
+	ihttp_global.h
+	)
 
 qt4_wrap_cpp(internalhttp_SRCS nhttpserver.h)
 
@@ -12,11 +17,6 @@ set_target_properties(NanogearIHTTPConnector PROPERTIES
 )
 
 target_link_libraries(NanogearIHTTPConnector Nanogear)
-
-# Install the library
-install(TARGETS NanogearIHTTPConnector
-    LIBRARY DESTINATION lib
-)
 
 # Install header files
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/

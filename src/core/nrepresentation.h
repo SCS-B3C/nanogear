@@ -27,6 +27,7 @@
 #include <QMimeData>
 #include <QByteArray>
 
+#include "nanogear_global.h"
 #include "nmimetype.h"
 #include "npreferencelist.h"
 
@@ -41,7 +42,7 @@
  *      http://roy.gbiv.com/pubs/dissertation/rest_arch_style.htm#sec_5_2_1_2
  */
 
-class NRepresentation : public QMimeData
+class NANOGEARSHARED_EXPORT NRepresentation : public QMimeData
 {
 public:
     NRepresentation() {}

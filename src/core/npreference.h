@@ -24,6 +24,8 @@
 #ifndef NPREFERENCE_H
 #define NPREFERENCE_H
 
+#include "nanogear_global.h"
+
 /*!
  * \class NPreference
  * \brief Encapsulates client preferences

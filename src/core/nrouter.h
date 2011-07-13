@@ -28,6 +28,7 @@
 #include <QString>
 #include <QPointer>
 
+#include "nanogear_global.h"
 #include "nresource.h"
 #include "nrepresentation.h"
 
@@ -46,7 +47,7 @@ class NResponse;
  *       are still valid pointers, if yes it deletes the referencing objects.
  */
 
-class NRouter : public NResource
+class NANOGEARSHARED_EXPORT NRouter : public NResource
 {
 public:
     NRouter() : m_notFound("<h2>404 - Not found</h2>", "text/html") {}

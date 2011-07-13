@@ -26,6 +26,8 @@
 
 #include <QString>
 
+#include "nanogear_global.h"
+
 /*!
  * \class NMimeType
  * \brief Encapsulates a MIME type
@@ -33,7 +35,7 @@
  * This class represents a MIME type as described in RFC2046
  */
 
-class NMimeType
+class NANOGEARSHARED_EXPORT NMimeType
 {
 public:
     /*!

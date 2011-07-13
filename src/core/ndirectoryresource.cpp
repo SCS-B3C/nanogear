@@ -23,7 +23,6 @@
 
 #include "ndirectoryresource.h"
 
-#include <magic.h>
 #include <QFile>
 #include <QFileInfo>
 
@@ -122,17 +121,7 @@ void NDirectoryResource::handleGet(const NRequest& request, NResponse& response)
 
 void NDirectoryResource::representFile(const QFileInfo& pathInfo, NResponse& response)
 {
-    // Try with libmagic first, it has a fairly complete default database. When an error
-    // occurs, mimeType will be empty
-    //! \todo: Handle libmagic errors
-    //! \todo: Create a thin layer over libmagic?
-    magic_t magicCookie = magic_open(MAGIC_MIME_TYPE | MAGIC_SYMLINK | MAGIC_ERROR);
-    magic_load(magicCookie, NULL);
-    QString mimeType(magic_file(magicCookie, pathInfo.absoluteFilePath().toLatin1().data()));
-    magic_close(magicCookie);
-
-    // If libmagic faild to find the MIME type, we query for custom-mapped extensions
-    // if none is found we return a generic "application/octet-stream" MIME type
+    QString mimeType;
 
     if (mimeType.isEmpty()) {
         QString customMapping(m_mimeMappings.value(pathInfo.completeSuffix()));
@@ -152,4 +141,5 @@ void NDirectoryResource::representFile(const QFileInfo& pathInfo, NResponse& res
 
     response.setStatus(NStatus::SUCCESS_OK);
     response.setRepresentation(&m_rawFile);
+    
 }

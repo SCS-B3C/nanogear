@@ -24,6 +24,8 @@
 #ifndef CONNECTORS_IHTTP_NHTTPSERVER_H
 #define CONNECTORS_IHTTP_NHTTPSERVER_H 1
 
+#include "ihttp_global.h"
+
 #include <QTcpServer>
 
 #include <nserver.h>
@@ -40,7 +42,7 @@ class QTcpSocket;
  *
  * \note It is not meant to be production-ready.
  */
-class NHTTPServer : public QTcpServer, public NServer
+class IHTTPSHARED_EXPORT NHTTPServer : public QTcpServer, public NServer
 {
     Q_OBJECT
 public:

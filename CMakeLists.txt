@@ -5,8 +5,6 @@ include(NanogearVersion)
 
 message(STATUS "This is Nanogear ${NANOGEAR_MAJOR}.${NANOGEAR_MINOR}.${NANOGEAR_PATCH}")
 
-find_package(Libmagic REQUIRED)
-
 find_package(Qt4 REQUIRED)
 set(QT_USE_QTNETWORK 1)
 set(QT_DONT_USE_QTGUI 1)

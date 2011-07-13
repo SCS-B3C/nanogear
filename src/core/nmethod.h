@@ -26,6 +26,7 @@
 
 #include <QString>
 
+#include "nanogear_global.h"
 #include "nmetadata.h"
 
 /*!
@@ -35,7 +36,7 @@
  * Used to determine which method to execute to handle a request. It is usually
  * filled by a concrete implementation of Server.
  */
-class NMethod : public NMetadata {
+class NANOGEARSHARED_EXPORT NMethod : public NMetadata {
 public:
 
     NMethod(const QString& name) : NMetadata(name) {}

@@ -26,13 +26,14 @@
 
 #include <QString>
 
+#include "nanogear_global.h"
 #include "nmetadata.h"
 
 /*!
  * \class NProtocol
  * \brief Wrap some common protocols in a class
  */
-class NProtocol : public NMetadata {
+class NANOGEARSHARED_EXPORT NProtocol : public NMetadata {
 public:
     /*!
      * Default constructor

@@ -24,6 +24,7 @@
 #ifndef NRESOURCE_H
 #define NRESOURCE_H
 
+#include "nanogear_global.h"
 #include "nuniform.h"
 
 /*!
@@ -42,7 +43,7 @@
  * \see Roy Fielding's dissertation at:
  *     http://roy.gbiv.com/pubs/dissertation/rest_arch_style.htm#sec_5_2_1_1
  */
-class NResource : public NUniform {
+class NANOGEARSHARED_EXPORT NResource : public NUniform {
 public:
     /*!
      * \return True if this resource was started

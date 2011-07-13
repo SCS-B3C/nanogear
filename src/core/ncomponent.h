@@ -24,6 +24,7 @@
 #ifndef NCOMPONENT_H
 #define NCOMPONENT_H
 
+#include "nanogear_global.h"
 #include "nresource.h"
 
 /*!
@@ -37,7 +38,7 @@
  * component is an abstract unit of software instructions and internal state
  * that provides a transformation of data via its interface." Roy T. Fielding
  */
-class NComponent : NResource {
+class NANOGEARSHARED_EXPORT NComponent : NResource {
 public:
     virtual ~NComponent();
 };

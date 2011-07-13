@@ -27,6 +27,7 @@
 #include <QObject>
 #include <QDateTime>
 
+#include "nanogear_global.h"
 #include "nstatus.h"
 
 class NRepresentation;
@@ -40,7 +41,7 @@ class NRepresentation;
  * concrete implementation of Server
  */
 
-class NResponse : public QObject
+class NANOGEARSHARED_EXPORT NResponse : public QObject
 {
 public:
     /*!

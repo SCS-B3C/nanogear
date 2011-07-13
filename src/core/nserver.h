@@ -26,6 +26,7 @@
 
 #include <QHostAddress>
 
+#include "nanogear_global.h"
 #include "nresource.h"
 
 /*!
@@ -37,7 +38,7 @@
  * A Server is usually attached to an Application object.
  */
 
-class NServer
+class NANOGEARSHARED_EXPORT NServer
 {
 public:
     /*!
