@@ -10,6 +10,17 @@ set(QT_USE_QTNETWORK 1)
 set(QT_DONT_USE_QTGUI 1)
 include(${QT_USE_FILE})
 
+#-----------------------------------------------------------------------------
+# Output directories.
+#
+SET(output_dir ${nanogear_BINARY_DIR}/bin)
+FOREACH(type LIBRARY RUNTIME ARCHIVE)
+  IF(NOT DEFINED CMAKE_${type}_OUTPUT_DIRECTORY)
+    SET(CMAKE_${type}_OUTPUT_DIRECTORY ${output_dir} CACHE INTERNAL "Single output directory for building all libraries.")
+  ENDIF()
+ENDFOREACH()
+
+
 #
 # Build documentation if doxygen and graphviz are found
 #
@@ -50,7 +61,7 @@ if (${WITH_EXAMPLES})
 endif (${WITH_EXAMPLES})
 
 #-----------------------------------------------------------------------------
-# Generate qxmlrpc file
+# Generate nanogear file
 #
 CONFIGURE_FILE(Usenanogear.cmake.in
                ${nanogear_BINARY_DIR}/Usenanogear.cmake COPYONLY)
