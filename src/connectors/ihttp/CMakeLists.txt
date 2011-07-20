@@ -9,7 +9,7 @@ qt4_wrap_cpp(internalhttp_SRCS nhttpserver.h)
 
 include_directories(${CMAKE_SOURCE_DIR}/src/core)
 
-add_library(NanogearIHTTPConnector SHARED ${internalhttp_SRCS})
+add_library(NanogearIHTTPConnector STATIC ${internalhttp_SRCS})
 
 set_target_properties(NanogearIHTTPConnector PROPERTIES
     VERSION ${NANOGEAR_MAJOR}.${NANOGEAR_MINOR}.${NANOGEAR_PATCH}
