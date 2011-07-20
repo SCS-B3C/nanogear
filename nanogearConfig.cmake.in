@@ -2,13 +2,18 @@
 #
 
 # The nanogear include file directories.
-SET(nanogear_INCLUDE_DIRS "@nanogear_INCLUDE_DIRS_CONFIG@")
+SET(nanogear_INCLUDE_DIRS 
+    "@nanogear_INCLUDE_DIRS_CONFIG@/src/core"
+    "@nanogear_INCLUDE_DIRS_CONFIG@/src/connectors/ihttp"
+)
  
 # The nanogear library directories. Note that if
 # nanogear_CONFIGURATION_TYPES is set (see below) then these directories
 # will be the parent directories under which there will be a directory
 # of runtime binaries for each configuration type.
-SET(nanogear_LIBRARY_DIRS "@nanogear_LIBRARY_DIRS_CONFIG@")
+SET(nanogear_LIBRARY_DIRS 
+    "@nanogear_LIBRARY_DIRS_CONFIG@"
+)
   
 # The nanogear runtime library directories. Note that if
 # nanogear_CONFIGURATION_TYPES is set (see below) then these directories
