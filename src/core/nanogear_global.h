@@ -15,10 +15,14 @@
 // Includes list
 #include <QtCore/qglobal.h>
 
-#if defined(Nanogear_EXPORTS)
-#  define NANOGEARSHARED_EXPORT Q_DECL_EXPORT
+#if defined(NANOGEARSHARED)
+  #if defined(Nanogear_EXPORTS)
+  #  define NANOGEARSHARED_EXPORT Q_DECL_EXPORT
+  #else
+  #  define NANOGEARSHARED_EXPORT Q_DECL_IMPORT
+  #endif
 #else
-#  define NANOGEARSHARED_EXPORT Q_DECL_IMPORT
+  #  define NANOGEARSHARED_EXPORT
 #endif
 
 #endif // NANOGEAR_GLOBAL_H

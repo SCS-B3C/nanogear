@@ -15,11 +15,14 @@
 // Includes list
 #include <QtCore/qglobal.h>
 
-#if defined(NanogearIHTTPConnector_EXPORTS)
-#  define IHTTPSHARED_EXPORT Q_DECL_EXPORT
+#if defined(NANOGEARIHTTPCONNECTORSHARED)
+  #if defined(NanogearIHTTPConnector_EXPORTS)
+  #  define IHTTPSHARED_EXPORT Q_DECL_EXPORT
+  #else
+  #  define IHTTPSHARED_EXPORT Q_DECL_IMPORT
+  #endif
 #else
-#  define IHTTPSHARED_EXPORT Q_DECL_IMPORT
-#endif
-
+  #  define IHTTPSHARED_EXPORT
+#endif 
 #endif // IHTTP_GLOBAL_H
 

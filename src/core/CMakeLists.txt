@@ -31,7 +31,13 @@ set(nanogear_SRCS
 	nuniform.h
 )
 
-add_library(Nanogear STATIC ${nanogear_SRCS})
+if(BUILD_SHARED_LIBS)
+    add_definitions(-DNANOGEARSHARED)
+    add_library(Nanogear SHARED ${nanogear_SRCS})
+else(BUILD_SHARED_LIBS)
+    add_library(Nanogear STATIC ${nanogear_SRCS})
+endif(BUILD_SHARED_LIBS)
+
 
 set_target_properties(Nanogear PROPERTIES
     VERSION ${NANOGEAR_MAJOR}.${NANOGEAR_MINOR}.${NANOGEAR_PATCH}
