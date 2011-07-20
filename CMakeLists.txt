@@ -48,3 +48,11 @@ add_subdirectory(src)
 if (${WITH_EXAMPLES})
     add_subdirectory(examples)
 endif (${WITH_EXAMPLES})
+
+#-----------------------------------------------------------------------------
+# Generate qxmlrpc file
+#
+CONFIGURE_FILE(UseNanogear.cmake.in
+               ${Nanogear_BINARY_DIR}/UseNanogear.cmake COPYONLY)
+
+INCLUDE(GenerateNanogearConfig.cmake)
