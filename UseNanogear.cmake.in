@@ -1,16 +1,16 @@
 #
-# This module is provided as Nanogear_USE_FILE by NanogearConfig.cmake. 
+# This module is provided as nanogear_USE_FILE by nanogearConfig.cmake. 
 # It can be INCLUDED in a project to load the needed compiler and linker
-# settings to use Nanogear.
+# settings to use nanogear.
 #
  
-IF(NOT Nanogear_USE_FILE_INCLUDED)
-  SET(Nanogear_USE_FILE_INCLUDED 1)
+IF(NOT nanogear_USE_FILE_INCLUDED)
+  SET(nanogear_USE_FILE_INCLUDED 1)
   
-  # Add include directories needed to use Nanogear.
-  INCLUDE_DIRECTORIES(${Nanogear_INCLUDE_DIRS})
+  # Add include directories needed to use nanogear.
+  INCLUDE_DIRECTORIES(${nanogear_INCLUDE_DIRS})
  
-  # Add link directories needed to use Nanogear.
-  LINK_DIRECTORIES(${Nanogear_LIBRARY_DIRS})
+  # Add link directories needed to use nanogear.
+  LINK_DIRECTORIES(${nanogear_LIBRARY_DIRS})
  
 ENDIF()

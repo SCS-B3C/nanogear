@@ -1,9 +1,9 @@
 project(nanogear CXX C)
 cmake_minimum_required(VERSION 2.6)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules")
-include(NanogearVersion)
+include(nanogearVersion)
 
-message(STATUS "This is Nanogear ${NANOGEAR_MAJOR}.${NANOGEAR_MINOR}.${NANOGEAR_PATCH}")
+message(STATUS "This is nanogear ${NANOGEAR_MAJOR}.${NANOGEAR_MINOR}.${NANOGEAR_PATCH}")
 
 find_package(Qt4 REQUIRED)
 set(QT_USE_QTNETWORK 1)
@@ -52,7 +52,7 @@ endif (${WITH_EXAMPLES})
 #-----------------------------------------------------------------------------
 # Generate qxmlrpc file
 #
-CONFIGURE_FILE(UseNanogear.cmake.in
-               ${Nanogear_BINARY_DIR}/UseNanogear.cmake COPYONLY)
+CONFIGURE_FILE(Usenanogear.cmake.in
+               ${nanogear_BINARY_DIR}/Usenanogear.cmake COPYONLY)
 
-INCLUDE(GenerateNanogearConfig.cmake)
+INCLUDE(GeneratenanogearConfig.cmake)

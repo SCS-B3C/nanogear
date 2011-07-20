@@ -1,55 +1,55 @@
-Nanogear#
-# NanogearConfig.cmake - Nanogear CMake configuration file for external projects.
+nanogear#
+# nanogearConfig.cmake - nanogear CMake configuration file for external projects.
 #
 
-# The Nanogear include file directories.
-SET(Nanogear_INCLUDE_DIRS "@Nanogear_INCLUDE_DIRS_CONFIG@")
+# The nanogear include file directories.
+SET(nanogear_INCLUDE_DIRS "@nanogear_INCLUDE_DIRS_CONFIG@")
  
-# The Nanogear library directories. Note that if
-# Nanogear_CONFIGURATION_TYPES is set (see below) then these directories
+# The nanogear library directories. Note that if
+# nanogear_CONFIGURATION_TYPES is set (see below) then these directories
 # will be the parent directories under which there will be a directory
 # of runtime binaries for each configuration type.
-SET(Nanogear_LIBRARY_DIRS "@Nanogear_LIBRARY_DIRS_CONFIG@")
+SET(nanogear_LIBRARY_DIRS "@nanogear_LIBRARY_DIRS_CONFIG@")
   
-# The Nanogear runtime library directories. Note that if
-# Nanogear_CONFIGURATION_TYPES is set (see below) then these directories
+# The nanogear runtime library directories. Note that if
+# nanogear_CONFIGURATION_TYPES is set (see below) then these directories
 # will be the parent directories under which there will be a directory
 # of runtime libraries for each configuration type.
-SET(Nanogear_RUNTIME_LIBRARY_DIRS "@Nanogear_RUNTIME_LIBRARY_DIRS_CONFIG@")
+SET(nanogear_RUNTIME_LIBRARY_DIRS "@nanogear_RUNTIME_LIBRARY_DIRS_CONFIG@")
  
-# The location of the UseNanogear.cmake file.
-SET(Nanogear_USE_FILE "@Nanogear_USE_FILE@")
+# The location of the Usenanogear.cmake file.
+SET(nanogear_USE_FILE "@nanogear_USE_FILE@")
   
  
-# A Nanogear install tree always provides one build configuration. 
-# A Nanogear build tree may provide either one or multiple build 
+# A nanogear install tree always provides one build configuration. 
+# A nanogear build tree may provide either one or multiple build 
 # configurations depending on the CMake generator used. 
-# Since Nanogear can be used either from a build tree or an install 
+# Since nanogear can be used either from a build tree or an install 
 # tree it is useful for outside projects to know the configurations available. 
-# If this NanogearConfig.cmake is in a Nanogear install 
-# tree Nanogear_CONFIGURATION_TYPES will be empty and 
-# Nanogear_BUILD_TYPE will be set to the value of
-# CMAKE_BUILD_TYPE used to build Nanogear. If NanogearConfig.cmake 
-# is in a Nanogear build tree then Nanogear_CONFIGURATION_TYPES 
-# and Nanogear_BUILD_TYPE will have values matching CMAKE_CONFIGURATION_TYPES 
+# If this nanogearConfig.cmake is in a nanogear install 
+# tree nanogear_CONFIGURATION_TYPES will be empty and 
+# nanogear_BUILD_TYPE will be set to the value of
+# CMAKE_BUILD_TYPE used to build nanogear. If nanogearConfig.cmake 
+# is in a nanogear build tree then nanogear_CONFIGURATION_TYPES 
+# and nanogear_BUILD_TYPE will have values matching CMAKE_CONFIGURATION_TYPES 
 # and CMAKE_BUILD_TYPE for that build tree (only one will ever be set).
-SET(Nanogear_CONFIGURATION_TYPES @Nanogear_CONFIGURATION_TYPES_CONFIG@)
-SET(Nanogear_BUILD_TYPE @Nanogear_BUILD_TYPE_CONFIG@)
+SET(nanogear_CONFIGURATION_TYPES @nanogear_CONFIGURATION_TYPES_CONFIG@)
+SET(nanogear_BUILD_TYPE @nanogear_BUILD_TYPE_CONFIG@)
 
-FIND_LIBRARY(Nanogear_LIBRARY_DEBUG Nanogear
-  HINTS ${Nanogear_LIBRARY_DIRS}/Debug NO_DEFAULT_PATH)
+FIND_LIBRARY(nanogear_LIBRARY_DEBUG nanogear
+  HINTS ${nanogear_LIBRARY_DIRS}/Debug NO_DEFAULT_PATH)
   
-FIND_LIBRARY(Nanogear_LIBRARY_RELEASE Nanogear
-  HINTS ${Nanogear_LIBRARY_DIRS}/Release NO_DEFAULT_PATH)
+FIND_LIBRARY(nanogear_LIBRARY_RELEASE nanogear
+  HINTS ${nanogear_LIBRARY_DIRS}/Release NO_DEFAULT_PATH)
   
-FIND_LIBRARY(Nanogear_LIBRARY Nanogear
-    HINTS ${Nanogear_LIBRARY_DIRS} NO_DEFAULT_PATH)
+FIND_LIBRARY(nanogear_LIBRARY nanogear
+    HINTS ${nanogear_LIBRARY_DIRS} NO_DEFAULT_PATH)
   
-IF(Nanogear_LIBRARY_DEBUG AND Nanogear_LIBRARY_RELEASE)
-  SET(Nanogear_LIBRARY "debug;${Nanogear_LIBRARY_DEBUG};optimized;${Nanogear_LIBRARY_RELEASE}")
-ELSEIF(Nanogear_LIBRARY_DEBUG)
-  SET(Nanogear_LIBRARY ${Nanogear_LIBRARY_DEBUG})
-ELSEIF(Nanogear_LIBRARY_RELEASE)
-  SET(Nanogear_LIBRARY ${Nanogear_LIBRARY_RELEASE})
+IF(nanogear_LIBRARY_DEBUG AND nanogear_LIBRARY_RELEASE)
+  SET(nanogear_LIBRARY "debug;${nanogear_LIBRARY_DEBUG};optimized;${nanogear_LIBRARY_RELEASE}")
+ELSEIF(nanogear_LIBRARY_DEBUG)
+  SET(nanogear_LIBRARY ${nanogear_LIBRARY_DEBUG})
+ELSEIF(nanogear_LIBRARY_RELEASE)
+  SET(nanogear_LIBRARY ${nanogear_LIBRARY_RELEASE})
 ENDIF()
 
