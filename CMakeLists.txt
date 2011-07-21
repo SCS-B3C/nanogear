@@ -1,7 +1,7 @@
 project(nanogear CXX C)
 cmake_minimum_required(VERSION 2.6)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules")
-include(nanogearVersion)
+include(NanogearVersion)
 
 message(STATUS "This is nanogear ${NANOGEAR_MAJOR}.${NANOGEAR_MINOR}.${NANOGEAR_PATCH}")
 

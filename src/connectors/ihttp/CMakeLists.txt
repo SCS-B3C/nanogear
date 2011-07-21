@@ -16,9 +16,6 @@ else(BUILD_SHARED_LIBS)
     add_library(NanogearIHTTPConnector STATIC ${internalhttp_SRCS})
 endif(BUILD_SHARED_LIBS)
 
-message("NanogearIHTTPConnector PROPERTIES
-    VERSION ->${NANOGEAR_MAJOR}<-.->${NANOGEAR_MINOR}<-.->${NANOGEAR_PATCH}<-
-    SOVERSION ->${NANOGEAR_MAJOR}<-")
 
 set_target_properties(NanogearIHTTPConnector PROPERTIES
     VERSION ${NANOGEAR_MAJOR}.${NANOGEAR_MINOR}.${NANOGEAR_PATCH}
