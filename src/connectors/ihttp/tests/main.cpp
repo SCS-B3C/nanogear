@@ -13,6 +13,7 @@
 #include <NHTTPServer.h>
 
 #include "testApplication.h"
+#include <NHTTPServer.h>
 
 int main(int argc, char *argv[]) {
     /*if(argc != 2) {
