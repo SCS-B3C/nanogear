@@ -10,7 +10,6 @@
  */
 
 #include <QtCore/QCoreApplication>
-#include <NHTTPServer.h>
 
 #include "testApplication.h"
 #include <NHTTPServer.h>
