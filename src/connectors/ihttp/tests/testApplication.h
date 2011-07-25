@@ -26,7 +26,7 @@
 #define TESTAPPLICATION_H
 
 #include "nanogear_global.h"
-#include <NApplication.h>
+#include <napplication.h>
 #include "nresourcecustom.h"
 
 /*!

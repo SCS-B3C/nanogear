@@ -12,7 +12,7 @@
 #include <QtCore/QCoreApplication>
 
 #include "testApplication.h"
-#include <NHTTPServer.h>
+#include <nhttpserver.h>
 
 int main(int argc, char *argv[]) {
     /*if(argc != 2) {
