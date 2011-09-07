@@ -59,7 +59,7 @@ public:
      */
     void start();
 
-public slots:
+public Q_SLOTS:
     /*!
      * This slot is called when a client connects to this QTcpServer, it just
      * get a pointer to the pending connection and connects a couple of signals,
